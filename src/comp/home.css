@@ -1,0 +1,265 @@
+/* Variáveis CSS para cores e tamanhos */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #28a745;
+    --light-background: #f9f9f9;
+    --dark-text: #333;
+    --light-text: #555;
+    --card-shadow: rgba(0, 0, 0, 0.06);
+    --card-hover-shadow: rgba(0, 0, 0, 0.08);
+    --transition-time: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home {
+    width: 100%;
+}
+
+/* Top banner */
+.home .top_banner {
+    /* background-image: url(../../public/image/banner.png); */
+    /* height: 450px; */
+    /* background-size: cover; */
+    /* background-position: center; */
+}
+
+/* Trending Products Section */
+.home .trending {
+    padding: 40px 20px;
+    background-color: var(--light-background);
+}
+
+.home .trending .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.home .trending .container .left_box {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header with Category Filters */
+.home .trending .container .left_box .header {
+    display: flex;
+    width: 100%;
+    padding: 15px 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--card-shadow);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .trending .container .left_box .header h2 {
+    font-size: 18px;
+    color: var(--dark-text);
+    text-transform: uppercase;
+}
+
+.home .trending .container .left_box .header .cate {
+    display: flex;
+    gap: 10px;
+}
+
+.home .trending .container .left_box .header .cate h3 {
+    font-size: 14px;
+    color: var(--light-text);
+    cursor: pointer;
+    transition: color var(--transition-time);
+}
+
+.home .trending .container .left_box .header .cate h3:hover {
+    color: var(--primary-color);
+}
+
+/* Product Cards */
+.home .products {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.home .products .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.home .products .box {
+    width: 220px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--card-shadow);
+    transition: transform var(--transition-time), box-shadow var(--transition-time);
+}
+
+.home .products .box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px var(--card-hover-shadow);
+}
+
+.home .products .box .img_box {
+    padding: 15px;
+    background: #f0f0f0;
+}
+
+.home .products .box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.home .products .box h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: var(--dark-text);
+    text-align: center;
+}
+
+.home .products .box p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.home .products .box h3 {
+    font-size: 16px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.home .products .box button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background var(--transition-time);
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.home .products .box button:hover {
+    background: #0056b3;
+}
+
+/* Food Truck Section */
+.home .foodTruck {
+    margin-top: 40px;
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.home .foodTruck h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.home .foodTruck .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.home .foodTruck .box {
+    width: 220px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-time);
+}
+
+.home .foodTruck .box:hover {
+    transform: translateY(-6px);
+}
+
+.home .foodTruck .img_box {
+    padding: 15px;
+    background: #f0f0f0;
+}
+
+.home .foodTruck .img_box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.home .foodTruck h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #222;
+}
+
+.home .foodTruck p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.home .foodTruck h3 {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.home .foodTruck button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background var(--transition-time);
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.home .foodTruck button:hover {
+    background: #004a9f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .home .trending .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home .trending .container .left_box {
+        width: 100%;
+    }
+
+    .home .products .box,
+    .home .foodTruck .box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .home .foodTruck h1 {
+        font-size: 24px;
+    }
+}

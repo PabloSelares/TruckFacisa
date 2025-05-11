@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Topo com aviso */
+.header .top_header {
+  width: 100%;
+  background-color: #e6f0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 10px;
+}
+
+.header .top_header .icon {
+  color: #007bff;
+  font-size: 20px;
+}
+
+.header .top_header .info p {
+  color: #007bff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Parte do meio com logo, busca, login/logout e nome do usuário */
+.header .mid_header {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: relative;
+}
+
+.header .mid_header .logo img {
+  width: 130px;
+  height: auto;
+  cursor: pointer;
+}
+
+.header .mid_header .search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 30px;
+}
+
+.header .mid_header .search input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.header .mid_header .search button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header .mid_header .search button:hover {
+  background-color: #0056b3;
+}
+
+.header .mid_header .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .mid_header .user .icon {
+  font-size: 22px;
+  color: #333;
+}
+
+.header .mid_header .user .btn button {
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header .mid_header .user .btn button:hover {
+  background-color: #479bf5;
+  color: #fff;
+}
+
+/* Nome e avatar do usuário no topo direito */
+.user_name_top_right {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.user_name_top_right .user_avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+/* Último header (navegação e perfil) */
+.header .last_header {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 20px 40px;
+  border-top: 1px solid #eee;
+}
+
+.header .user_profile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center; /* adiciona alinhamento ao centro */
+}
+
+.header .user_profile .icon {
+  font-size: 24px;
+  color: #007bff;
+}
+
+.header .user_profile .info h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.header .user_profile .info p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Centralização da navegação */
+.header .nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header .nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.header .nav ul li {
+  font-size: 16px;
+}
+
+.header .nav .link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.header .nav .link:hover {
+  color: #0056b3;
+}
+
+.header .offer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #007bff;
+  font-weight: 500;
+}
