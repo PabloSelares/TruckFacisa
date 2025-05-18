@@ -242,6 +242,23 @@
     background: #004a9f;
 }
 
+/* Avaliações fixas no canto direito */
+.home .right_box {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--card-shadow);
+    padding: 20px;
+    z-index: 1000;
+}
+
+.home .right_box .testimonial {
+    display: block;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .home .trending .container {
@@ -261,5 +278,14 @@
 
     .home .foodTruck h1 {
         font-size: 24px;
+    }
+
+    /* Avaliações voltam ao fluxo normal em telas pequenas */
+    .home .right_box {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: none;
+        padding: 0;
     }
 }

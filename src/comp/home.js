@@ -1,21 +1,34 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";  // import do hook
 import './home.css';
 import axios from "axios";
 
-// Componente para exibir cada produto
-const Product = ({ product }) => (
+const renderStars = (rating) => {
+    const totalStars = 5;
+    const stars = [];
+
+    for (let i = 1; i <= totalStars; i++) {
+        stars.push(
+            <span key={i} style={{ color: i <= rating ? "#ffc107" : "#e4e5e9" }}>★</span>
+        );
+    }
+
+    return <div className="stars">{stars}</div>;
+};
+
+// Modificação no Product para receber a função de adicionar ao carrinho
+const Product = ({ product, onAddToCart }) => (
     <div className="box">
         <div className="img_box">
             <img src={product.image} alt={product.name} />
             <h2>{product.name}</h2>
             <p>{product.description}</p>
             <h3>R$ {product.price}</h3>
-            <button>Adicionar ao carrinho</button>
+            <button onClick={() => onAddToCart(product)}>Adicionar ao carrinho</button>
         </div>
     </div>
 );
 
-// Componente para exibir os Food Trucks
 const FoodTruck = ({ food }) => (
     <div className="box">
         <div className="img_box">
@@ -23,6 +36,8 @@ const FoodTruck = ({ food }) => (
             <h2>{food.name}</h2>
             <p>{food.description}</p>
             <h3>R$ {food.price}</h3>
+            <p><strong>Horário:</strong> 10:00 - 22:00</p>
+            {renderStars(food.rating)}
             <button>Ver itens do Food</button>
         </div>
     </div>
@@ -34,13 +49,13 @@ const Home = () => {
     const [foods, setFoods] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    // Carregar dados do backend
+    const navigate = useNavigate();  // hook para navegar
+
     useEffect(() => {
         axios.get("http://localhost:3000/api/produtos")
             .then((response) => {
-                console.log("Produtos carregados:", response.data);
-                setOriginalProducts(response.data);      // mantém os dados originais
-                setTrendingProducts(response.data);      // exibe todos inicialmente
+                setOriginalProducts(response.data);
+                setTrendingProducts(response.data);
                 setLoading(false);
             })
             .catch((error) => {
@@ -50,7 +65,11 @@ const Home = () => {
 
         axios.get("http://localhost:3000/api/foodtrucks")
             .then((response) => {
-                setFoods(response.data);
+                const foodsWithRating = response.data.map(food => ({
+                    ...food,
+                    rating: food.rating ?? Math.floor(Math.random() * 5) + 1
+                }));
+                setFoods(foodsWithRating);
             })
             .catch((error) => {
                 console.error("Erro ao carregar Food Trucks:", error);
@@ -58,21 +77,30 @@ const Home = () => {
     }, []);
 
     const filterCategory = useCallback((category) => {
-        console.log(`Filtrando por: ${category}`);
         const filteredProducts = originalProducts.filter(product =>
             product.type.toLowerCase() === category.toLowerCase()
         );
-
-        if (filteredProducts.length === 0) {
-            console.log("Nenhum produto encontrado para essa categoria");
-        }
-
         setTrendingProducts(filteredProducts);
     }, [originalProducts]);
 
     const resetTrendingProducts = useCallback(() => {
         setTrendingProducts(originalProducts);
     }, [originalProducts]);
+
+    // Função para adicionar produto ao carrinho no localStorage e navegar para /carrinho
+    const handleAddToCart = (product) => {
+        // Recupera o carrinho do localStorage ou cria vazio
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Adiciona o produto ao carrinho
+        cart.push(product);
+
+        // Salva novamente no localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Redireciona para a página do carrinho
+        navigate('/carrinho');
+    };
 
     if (loading) {
         return <p>Carregando produtos...</p>;
@@ -100,7 +128,7 @@ const Home = () => {
                             <div className="container">
                                 {trendingProducts.length > 0 ? (
                                     trendingProducts.map(product => (
-                                        <Product key={product._id} product={product} />
+                                        <Product key={product._id} product={product} onAddToCart={handleAddToCart} />
                                     ))
                                 ) : (
                                     <p>Nenhum produto encontrado para essa categoria</p>
