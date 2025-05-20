@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useNavigate } from "react-router-dom";  // import do hook
+import { useNavigate } from "react-router-dom";
 import './home.css';
 import axios from "axios";
 
@@ -16,7 +16,6 @@ const renderStars = (rating) => {
     return <div className="stars">{stars}</div>;
 };
 
-// Modificação no Product para receber a função de adicionar ao carrinho
 const Product = ({ product, onAddToCart }) => (
     <div className="box">
         <div className="img_box">
@@ -49,7 +48,7 @@ const Home = () => {
     const [foods, setFoods] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const navigate = useNavigate();  // hook para navegar
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get("http://localhost:3000/api/produtos")
@@ -87,18 +86,10 @@ const Home = () => {
         setTrendingProducts(originalProducts);
     }, [originalProducts]);
 
-    // Função para adicionar produto ao carrinho no localStorage e navegar para /carrinho
     const handleAddToCart = (product) => {
-        // Recupera o carrinho do localStorage ou cria vazio
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        // Adiciona o produto ao carrinho
         cart.push(product);
-
-        // Salva novamente no localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
-
-        // Redireciona para a página do carrinho
         navigate('/carrinho');
     };
 
@@ -108,7 +99,15 @@ const Home = () => {
 
     return (
         <div className="home">
-            <div className="top_banner"></div>
+            <div className="intro-container">
+                <img src="/image/banner.jpeg" alt="Food Truck" className="banner-img" />
+                <h1>Bem-vindo ao UniTruck!</h1>
+                <p>
+                    Aqui você encontra os melhores lanches dos food trucks localizados abaixo da faculdade.
+                    Faça seu pedido antecipado, evite filas e aproveite as promoções exclusivas. Explore os
+                    produtos em destaque e conheça os food trucks disponíveis!
+                </p>
+            </div>
 
             <div className="trending">
                 <div className="container">
