@@ -28,7 +28,7 @@ const Product = ({ product, onAddToCart }) => (
     </div>
 );
 
-const FoodTruck = ({ food }) => (
+const FoodTruck = ({ food, onViewItems }) => (
     <div className="box">
         <div className="img_box">
             <img src={food.image} alt={food.name} />
@@ -37,7 +37,7 @@ const FoodTruck = ({ food }) => (
             <h3>R$ {food.price}</h3>
             <p><strong>Horário:</strong> 10:00 - 22:00</p>
             {renderStars(food.rating)}
-            <button>Ver itens do Food</button>
+            <button onClick={() => onViewItems(food._id)}>Ver itens do Food</button>
         </div>
     </div>
 );
@@ -49,6 +49,10 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
 
     const navigate = useNavigate();
+
+    const handleViewItems = (id) => {
+        navigate(`/foodtruck/${id}`);
+    };
 
     useEffect(() => {
         axios.get("http://localhost:3000/api/produtos")
@@ -143,14 +147,26 @@ const Home = () => {
                 <div className="container">
                     {foods.length > 0 ? (
                         foods.map(food => (
-                            <FoodTruck key={food._id} food={food} />
+                            <FoodTruck key={food._id} food={food} onViewItems={handleViewItems} />
                         ))
                     ) : (
                         <p>Nenhum food truck disponível</p>
                     )}
                 </div>
             </div>
+             <footer className="footer">
+            <div className="footer-content">
+                <p>© {new Date().getFullYear()} UniTruck. Todos os direitos reservados.</p>
+                <p>Contato: contato@unitruck.com | Tel: (00) 1234-5678</p>
+                <p>Siga-nos nas redes sociais: 
+                    <a href="https://facebook.com/unitruck" target="_blank" rel="noopener noreferrer"> Facebook</a> | 
+                    <a href="https://instagram.com/unitruck" target="_blank" rel="noopener noreferrer"> Instagram</a> | 
+                    <a href="https://twitter.com/unitruck" target="_blank" rel="noopener noreferrer"> Twitter</a>
+                </p>
+            </div>
+        </footer>
         </div>
+         
     );
 };
 

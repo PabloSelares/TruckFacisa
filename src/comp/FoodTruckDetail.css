@@ -1,0 +1,122 @@
+.foodtruck-detail {
+    padding: 2.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    color: #444;
+}
+
+.foodtruck-detail h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.75rem;
+    color: #222;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.foodtruck-detail p {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.foodtruck-detail h2 {
+    margin-top: 3rem;
+    font-size: 2.2rem;
+    color: #333;
+    border-bottom: 3px solid #f9a825; /* cor dourada mais suave */
+    display: inline-block;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+.box {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.2rem 1rem 1.8rem 1rem;
+    width: 280px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.1rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.65rem;
+    color: #222;
+    font-weight: 700;
+}
+
+.box p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+    flex-grow: 1;
+    line-height: 1.4;
+}
+
+.box strong {
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.box button {
+    background-color:#007bff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 0.55rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(249, 168, 37, 0.6);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    align-self: stretch;
+    user-select: none;
+}
+
+.box button:hover {
+    background-color: #000000;
+    box-shadow: 0 6px 18px rgba(198, 132, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .products {
+        justify-content: center;
+    }
+    
+    .box {
+        width: 90%;
+        max-width: 320px;
+    }
+}
