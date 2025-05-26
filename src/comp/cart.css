@@ -11,7 +11,7 @@
 h1 {
     text-align: center;
     margin-bottom: 30px;
-    color: #004aad; /* azul forte */
+    color: #004aad; 
     text-transform: uppercase;
     letter-spacing: 1.2px;
 }
@@ -31,7 +31,7 @@ h1 {
 }
 
 .cart-item:hover {
-    background-color: #f0f4ff; /* azul clarinho */
+    background-color: #f0f4ff; 
 }
 
 .cart-item-image {
@@ -46,7 +46,7 @@ h1 {
 .cart-item-info h2 {
     margin: 0 0 6px 0;
     font-size: 1.2rem;
-    color: #002d72; /* azul escuro */
+    color: #002d72; 
 }
 
 .cart-item-info p {

@@ -12,7 +12,7 @@ const Nav = () => {
 
   return (
     <div className="header">
-      {/* Top Header */}
+     
       <div className="top_header">
         <div className="icon">
           <GiFoodTruck />
@@ -24,7 +24,6 @@ const Nav = () => {
         </div>
       </div>
 
-      {/* Middle Header */}
       <div className="mid_header">
         <div className="logo">
           <img src="/image/logo.png" alt="logo" />
@@ -71,7 +70,6 @@ const Nav = () => {
         )}
       </div>
 
-      {/* Bottom Header */}
       <div className="last_header">
         <div className="user_profile">
           <div className="icon">
@@ -80,7 +78,7 @@ const Nav = () => {
 
           <div className="info">
             {!isAuthenticated && <p>Por favor, logue!</p>}
-            {/* Info do usuário foi removida daqui */}
+       
           </div>
 
           <div className="nav">
@@ -91,11 +89,10 @@ const Nav = () => {
               <li>
                 <Link to="/carrinho" className="link">Carrinho</Link>
               </li>
+               <li><Link to="/foodtrucks" className="link">Food Trucks</Link></li>
               <li>
-                <Link to="/foods" className="link">Foods</Link>
-              </li>
-              <li>
-                <Link to="/sobre" className="link">Sobre Nós</Link>
+              <li><Link to="/sobre" className="link">Sobre Nós</Link></li>
+
               </li>
             </ul>
           </div>

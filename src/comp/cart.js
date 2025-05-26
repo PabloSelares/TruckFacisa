@@ -4,7 +4,7 @@ import './cart.css';
 
 const Cart = () => {
     const [cart, setCart] = useState([]);
-    const [removingIndex, setRemovingIndex] = useState(null); // para animação
+    const [removingIndex, setRemovingIndex] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -18,7 +18,6 @@ const Cart = () => {
 
         setRemovingIndex(indexToRemove);
 
-        // espera a animação de saída (300ms)
         setTimeout(() => {
             const updatedCart = cart.filter((_, index) => index !== indexToRemove);
             setCart(updatedCart);

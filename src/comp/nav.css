@@ -12,7 +12,7 @@
   position: relative;
 }
 
-/* Topo com aviso */
+
 .header .top_header {
   width: 100%;
   background-color: #e6f0ff;
@@ -34,7 +34,7 @@
   font-weight: 500;
 }
 
-/* Parte do meio com logo, busca, login/logout e nome do usuário */
+
 .header .mid_header {
   max-width: 100%;
   display: flex;
@@ -105,7 +105,6 @@
   color: #fff;
 }
 
-/* Nome e avatar do usuário no topo direito */
 .user_name_top_right {
   position: absolute;
   top: 15px;
@@ -126,7 +125,6 @@
   border: 2px solid #007bff;
 }
 
-/* Último header (navegação e perfil) */
 .header .last_header {
   width: 100%;
   background-color: #f9f9f9;
@@ -138,7 +136,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: center; /* adiciona alinhamento ao centro */
+  align-items: center; 
 }
 
 .header .user_profile .icon {
@@ -157,7 +155,7 @@
   color: #666;
 }
 
-/* Centralização da navegação */
+
 .header .nav {
   width: 100%;
   display: flex;

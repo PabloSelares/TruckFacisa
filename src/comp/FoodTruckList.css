@@ -1,0 +1,30 @@
+.foodtruck-list {
+    padding: 2rem;
+    text-align: center;
+}
+
+.foodtruck-list .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.foodtruck-list .box {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    width: 250px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.foodtruck-list .box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.stars {
+    margin: 0.5rem 0;
+}
