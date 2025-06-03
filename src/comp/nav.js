@@ -41,6 +41,7 @@ const Nav = () => {
             <div className="icon">
               <CiLogout />
             </div>
+            
             <div className="btn">
               <button
                 onClick={() =>
@@ -53,9 +54,6 @@ const Nav = () => {
           </div>
         ) : (
           <div className="user">
-            <div className="icon">
-              <CiLogin />
-            </div>
             <div className="btn">
               <button onClick={() => loginWithRedirect()}>Log In</button>
             </div>
@@ -74,11 +72,6 @@ const Nav = () => {
         <div className="user_profile">
           <div className="icon">
           
-          </div>
-
-          <div className="info">
-            {!isAuthenticated && <p>Por favor, logue!</p>}
-       
           </div>
 
           <div className="nav">

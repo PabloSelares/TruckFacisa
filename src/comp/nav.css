@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 10px;
+  padding: 10px 10px;
   gap: 10px;
 }
 
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 40px;
+  padding: 0px 20px;
   position: relative;
 }
 
@@ -64,8 +64,12 @@
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #f9f9f9;
 }
 
+.header .mid_header .search input:hover {
+  border-color: rgb(114, 143, 249);
+}
 .header .mid_header .search button {
   background-color: #007bff;
   color: #fff;
@@ -91,6 +95,7 @@
 }
 
 .header .mid_header .user .btn button {
+  width: 125px;
   padding: 8px 12px;
   background-color: transparent;
   border: 1px solid #007bff;
@@ -135,7 +140,6 @@
 .header .user_profile {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   align-items: center; 
 }
 
@@ -183,6 +187,11 @@
 
 .header .nav .link:hover {
   color: #0056b3;
+  border: lightskyblue 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #007bff;
+  color: white;
 }
 
 .header .offer {
