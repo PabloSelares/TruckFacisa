@@ -1,16 +1,13 @@
 /* home.css */
 
 .home {
-    padding: 20px;
     font-family: Arial, sans-serif;
 }
 
 /* Introdução com banner */
 .home .intro-container {
-    padding: 40px 20px;
     background: #f9f9f9;
     text-align: center;
-    border-radius: 8px;
     margin-bottom: 40px;
 }
 
@@ -21,55 +18,52 @@
     border-radius: 12px;
     margin-bottom: 20px;
 }
-
-.home .intro-container h1 {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.home .intro-container p {
-    font-size: 18px;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 /* Trending Section */
 .trending {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .trending .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: center;
 }
 
 .left_box .header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
     flex-wrap: wrap;
+    align-items: center;
+    padding: 15px 30px;
+}
+.heading{
+    padding: 15px;
 }
 
-.left_box .heading h1 {
+.heading h1 {
     font-size: 26px;
-    color: #222;
+    color: #007BFF;
     cursor: pointer;
+    margin: 0;
 }
 
 .left_box .cate h3 {
     margin-left: 15px;
-    font-size: 18px;
-    color: #555;
+    font-size: 17px;
+    color: #007BFF;
     cursor: pointer;
     transition: color 0.3s;
     display: inline-block;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 .left_box .cate h3:hover {
-    color: #000;
+color: #0056b3;
+  border: lightskyblue 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #007bff;
+  color: white;
 }
 
 /* Produtos */
@@ -97,7 +91,6 @@
     height: 180px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 15px;
 }
 
 .box h2 {
@@ -151,7 +144,6 @@
 
 .foodTruck h1 {
     font-size: 28px;
-    margin-bottom: 30px;
     color: #fff;
 }
 

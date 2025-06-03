@@ -105,14 +105,7 @@ const Home = () => {
         <div className="home">
             <div className="intro-container">
                 <img src="/image/banner.jpeg" alt="Food Truck" className="banner-img" />
-                <h1>Bem-vindo ao UniTruck!</h1>
-                <p>
-                    Aqui você encontra os melhores lanches dos food trucks localizados abaixo da faculdade.
-                    Faça seu pedido antecipado, evite filas e aproveite as promoções exclusivas. Explore os
-                    produtos em destaque e conheça os food trucks disponíveis!
-                </p>
-            </div>
-
+               </div>
             <div className="trending">
                 <div className="container">
                     <div className="left_box">
