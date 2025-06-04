@@ -4,11 +4,10 @@
 }
 
 .foodtruck-list .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    display: grid;
+   padding: 20px;
+   gap: 40px;
     justify-content: center;
-    margin-top: 2rem;
 }
 
 .foodtruck-list .box {

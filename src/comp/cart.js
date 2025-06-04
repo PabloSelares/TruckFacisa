@@ -32,7 +32,7 @@ const Cart = () => {
 
     return (
         <div className="cart-container">
-            <h1>Seu Carrinho</h1>
+            <h1 className="title-cart">Seu Carrinho</h1>
             <ul className="cart-list">
                 {cart.map((item, index) => (
                     <li

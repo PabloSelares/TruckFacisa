@@ -72,6 +72,13 @@ color: #0056b3;
   color: white;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
 /* Produtos */
 .products .container {
     display: grid;
@@ -141,23 +148,28 @@ color: #0056b3;
 }
 
 /* Food Truck */
-.foodTruck {
+.foodTruck{
     text-align: center;
     background-color: #007BFF; /* azul Bootstrap */
-    padding: 40px 20px;
+    padding: 5px 20px;
     border-radius: 20px;
     color: #fff;
 }
 
-.foodTruck h1 {
-    font-weight: bolder;
-    font-size: 28px;
+.foodTruck .title-food{
+    text-align: center;
+    padding: 5px;
+    margin: 10PX;
+    font-size: 50px;
     color: #fff;
 }
+
+
 
 .foodTruck .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    padding: 20px;
 }
 

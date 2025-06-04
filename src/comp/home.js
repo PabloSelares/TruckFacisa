@@ -136,7 +136,7 @@ const Home = () => {
             </div>
 
             <div className="foodTruck">
-                <h1>Food's</h1>
+                <h1 className="title-food">Food's</h1>
                 <div className="container">
                     {foods.length > 0 ? (
                         foods.map(food => (
