@@ -127,7 +127,7 @@ const Home = () => {
                                         <Product key={product._id} product={product} onAddToCart={handleAddToCart} />
                                     ))
                                 ) : (
-                                    <p>Nenhum produto encontrado para essa categoria</p>
+                                    <p style={{textAlign: 'center'}}>Nenhum produto encontrado para essa categoria</p>
                                 )}
                             </div>
                         </div>
