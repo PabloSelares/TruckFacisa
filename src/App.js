@@ -3,6 +3,7 @@ import Nav from "./comp/nav";
 import Footer from "./comp/footer";
 import { BrowserRouter } from "react-router-dom";
 import Rout from "./comp/rout";
+import './comp/global.css'
 
 const App = () => {
   return (
