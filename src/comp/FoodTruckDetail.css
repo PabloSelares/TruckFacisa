@@ -34,7 +34,7 @@
 }
 
 .products {
-    display: flex;
+
     flex-wrap: wrap;
     gap: 1.8rem;
     justify-content: center;
@@ -98,7 +98,7 @@
     padding: 0.55rem 1.6rem;
     font-size: 1rem;
     font-weight: 600;
-    box-shadow: 0 4px 10px rgba(249, 168, 37, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     align-self: stretch;
@@ -106,8 +106,11 @@
 }
 
 .box button:hover {
-    background-color: #000000;
-    box-shadow: 0 6px 18px rgba(198, 132, 0, 0.8);
+    background-color: white;
+    box-shadow: 0 6px 18px rgba(254, 254, 254, 0.8);
+    color: #007bff;
+    border: #007bff 1px solid;
+
 }
 
 @media (max-width: 768px) {
