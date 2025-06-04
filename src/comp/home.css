@@ -160,26 +160,4 @@ color: #0056b3;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
-.footer {
-    color: #322d2d;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 3rem;
-    box-shadow: 0 -3px 10px rgba(0,0,0,0.3);
-}
 
-.footer a {
-    color:  #007BFF;
-    text-decoration: none;
-    margin: 0 0.3rem;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: #fff176;
-}
-
-.footer-content p {
-    margin: 0.3rem 0;
-}
