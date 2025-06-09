@@ -104,7 +104,7 @@ const Home = () => {
     return (
         <div className="home">
             <div className="intro-container">
-                <img src="/image/banner.jpeg" alt="Food Truck" className="banner-img" />
+                <img src="/image/Presentation (2) (1).png" alt="Food Truck" className="banner-img" />
                </div>
             <div className="trending">
                 <div className="container">

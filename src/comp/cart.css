@@ -66,21 +66,35 @@
     font-size: 1.5rem;
     text-align: right;
     color: #002d72;
-    border-top: 2px solid #004aad;
+    border-top: 2px solid #002d72;
     padding-top: 15px;
 }
-
+.btn-remove {
+    background-color: #004aad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    justify-content: space-between;
+    display: flex;
+}
+.btn-remove:hover {
+    background-color: #002d72;
+}
 .btn-pay {
     display: block;
     margin: 30px auto 0;
     background-color: #004aad;
     color: #fff;
     border: none;
-    padding: 15px 45px;
+    padding: 10px 35px;
     font-size: 1.2rem;
-    border-radius: 30px;
+    border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,74,173,0.3);
+    box-shadow: 0 4px 8px rgba(55, 55, 55, 0.3);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     font-weight: 600;
     text-transform: uppercase;

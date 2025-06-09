@@ -38,9 +38,7 @@ const Nav = () => {
 
         {isAuthenticated ? (
           <div className="user">
-            <div className="icon">
-              <CiLogout />
-            </div>
+       
             
             <div className="btn">
               <button
@@ -48,14 +46,14 @@ const Nav = () => {
                   logout({ logoutParams: { returnTo: window.location.origin } })
                 }
               >
-                Logout
+                Sair
               </button>
             </div>
           </div>
         ) : (
           <div className="user">
             <div className="btn">
-              <button onClick={() => loginWithRedirect()}>Log In</button>
+              <button onClick={() => loginWithRedirect()}>Entrar</button>
             </div>
           </div>
         )}

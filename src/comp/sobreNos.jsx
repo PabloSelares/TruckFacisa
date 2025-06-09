@@ -36,9 +36,7 @@ const SobreNos = () => {
           Tem dúvidas, sugestões ou deseja cadastrar seu food truck? Fale conosco pelo e-mail: <strong>contato@foodplataforma.com</strong>
         </p>
         </div>
-        <div className='img-sobre-nos'>
-          <img src='https://i.imgur.com/8Z5k1bH.png' alt='Sobre Nós' />
-        </div>
+       
       </div>
     </>
   );
